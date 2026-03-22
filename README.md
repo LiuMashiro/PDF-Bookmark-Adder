@@ -1,12 +1,12 @@
 # PDF-Bookmark-Adder
-一个简单的Python小脚本，可以为PDF快速添加书签作为目录，用于Goodnotes看书等场景。
+一个简单的Python小脚本，可以为PDF快速添加书签作为目录，将生成一个已添加目录的新PDF，用于Goodnotes看书等场景。
 
 ## 快速使用
-1.安装依赖
+1.确保已安装Python 3，安装依赖
 ```
 pip install PyPDF2
 ```
-2.运行脚本：
+2.运行mark_adder.py
 - 拖入PDF或输入PDF路径（路径中的双引号会被过滤）
 - 粘贴书签内容，格式：页码-标题，每行一个（“-”两侧若有空格将被自动过滤）
 - 连续输入两个回车结束输入
@@ -36,4 +36,8 @@ pip install PyPDF2
 严禁出现：“第一板块...”而非“001-第一板块”等不遵守目录格式的行
 所有页码均+N
 ```
-自行换算PDF内页码与实际页码之间的页数差距，写入最后一行。
+自行换算PDF内页码与实际页码之间的页数差距，写入N。
+
+## 效果示例
+<img width="1532" height="1412" alt="image" src="https://github.com/user-attachments/assets/10c9f937-b4c7-402c-83f6-9d1433262f84" />
+
