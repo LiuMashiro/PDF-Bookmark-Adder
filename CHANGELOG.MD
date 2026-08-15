@@ -13,3 +13,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - 优化提示文本
+- 改用新库（无功能变化）
+
+## [1.0.0]
+- 首个版本
