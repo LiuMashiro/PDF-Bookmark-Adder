@@ -13,9 +13,28 @@ def get_valid_pdf_path():
             return path
         print("❌ 输入错误，请重新输入。")
 
+def print_ai_prompt():
+    """输出供用户复制给AI的书签生成提示词"""
+    print("\n" + "-" * 50)
+    print("以下提示词可复制给AI，用于生成书签内容：")
+    print("-" * 50)
+    print("将目录整理为页码-标题（如001-第一节 示例标题，每行换行）的格式。"
+          "板块、部分、章节、篇章等分节（如有）必须写入目录格式中。"
+          "尽量压缩目录名，不要太长。")
+    print("示例：")
+    print("001-第一板块")
+    print("001-第一部分")
+    print("001-第一章 第一节 示例1")
+    print("007-第二章 第二节 示例2")
+    print("008-第二部分")
+    print("......")
+    print('严禁出现："第一板块..."而非"001-第一板块"等不遵守目录格式的行')
+    print("所有页码均+N")
+    print("-" * 50)
+
 def parse_bookmarks():
     """解析用户输入的书签内容，兼容全格式、多行粘贴"""
-    print("\n请输入遵守格式的书签内容：")
+    print("\n请输入遵守格式的书签内容（回车两次结束）：")
     bookmarks = []
     while True:
         line = input().strip()
@@ -67,8 +86,8 @@ def add_bookmarks(pdf_path, bookmarks):
 
 if __name__ == "__main__":
     print("=== PDF 书签添加器 ===")
-    print("回车两次结束")
     pdf_path = get_valid_pdf_path()
+    print_ai_prompt()
     bookmarks = parse_bookmarks()
     
     if bookmarks:
