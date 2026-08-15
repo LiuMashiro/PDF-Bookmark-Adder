@@ -1,5 +1,5 @@
 # PDF-Bookmark-Adder
-一个简单的Python小脚本，可以为PDF快速添加书签作为目录，将生成一个已添加目录的新PDF，用于Goodnotes看书等场景。
+一个简单的Python小脚本，可以为PDF快速添加可跳转书签目录，应对PDF长文档翻页定位问题。将生成一个已添加目录的新PDF。
 
 ## 快速使用
 1.在release中下载程序
